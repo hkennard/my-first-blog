@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render, get_object_or_404
+from . import views
 
 urlpatterns = [
+    path('', views.post_list, name='post_list'),
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
