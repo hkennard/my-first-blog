@@ -17,9 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render, get_object_or_404
 
-
-Post.objects.get(pk=pk)
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
